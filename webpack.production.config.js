@@ -23,19 +23,19 @@ module.exports = {
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       // sourceMap: true,
-      beautify: false,
-      comments: false,
-      minimize: true,
-      debug: false,
-      compress: {
-        sequences: true,
-        booleans: true,
-        loops: true,
-        unused: true,
-        warnings: false,
-        drop_console: true,
-        unsafe: true
-      }
+      beautify: true,
+      // comments: false,
+      // minimize: true,
+      // debug: false,
+      // compress: {
+      //   sequences: true,
+      //   booleans: true,
+      //   loops: true,
+      //   unused: true,
+      //   warnings: false,
+      //   drop_console: true,
+      //   unsafe: true
+      // }
     }),
     new webpack.optimize.AggressiveMergingPlugin()
   ],

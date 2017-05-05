@@ -8,4 +8,5 @@ module.exports = {
 	Input: require('./Input').default,
 	Text: require('./Text').default,
 	RootContainer: require('./RootContainer').default,
+	Game: require('./Game'),
 }
