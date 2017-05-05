@@ -2,6 +2,8 @@ let path = require('path')
 let webpack = require('webpack')
 let autoprefixer = require('autoprefixer')
 
+let canvasinput = path.join(__dirname, '/node_modules/canvasinput/CanvasInput.js')
+
 module.exports = {
   devtool: 'source-map',
   entry: [
@@ -50,6 +52,15 @@ module.exports = {
           path.resolve('./')
         ]
       },
+      {
+        test: /canvasinput\.js/,
+        use: 'expose-loader?CanvasInput'
+      },
     ]
   },
+  resolve: {
+    alias: {
+      'canvasinput': canvasinput,
+    },
+  }
 }
