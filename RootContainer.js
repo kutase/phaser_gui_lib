@@ -1,9 +1,15 @@
 import Container from './Container'
-import game from '../classes/Game'
+import { getGame } from './Game'
 
-let rootContainer = new Container(0, 0)
-rootContainer.moveToGroup(game.GUIGroup)
+function genRootContainer () {
+	let game = getGame()
 
-game.rootContainer = rootContainer
+	let rootContainer = new Container(0, 0)
+	rootContainer.moveToGroup(game.GUIGroup)
 
-export default rootContainer
+	game.rootContainer = rootContainer
+
+	return rootContainer
+}
+
+export default genRootContainer

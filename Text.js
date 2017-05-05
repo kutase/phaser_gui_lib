@@ -1,5 +1,5 @@
 import AbstractLeaf from './AbstractLeaf'
-import game from './Game'
+import { getGame } from './Game'
 
 export default class Text extends AbstractLeaf {
 	constructor (x, y, text, style = {}) {
@@ -23,6 +23,7 @@ export default class Text extends AbstractLeaf {
 
 	setupText (text) {
 		let { x, y } = this
+		let game = getGame()
 
 		this.text = game.add.text(x, y, text)
 		this.style = this.params

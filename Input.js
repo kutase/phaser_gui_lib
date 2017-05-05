@@ -1,7 +1,7 @@
 import AbstractLeaf from './AbstractLeaf'
-import game from './Game'
+import { getGame } from './Game'
 import CanvasInput from 'canvasinput'
-import { isFunc } from '../utils/other'
+import { isFunc } from './utils/other'
 
 export default class Input extends AbstractLeaf {
 	constructor (x, y, width, height, style = {}) {
@@ -22,6 +22,8 @@ export default class Input extends AbstractLeaf {
 	}
 
 	setupInput (x, y, width, height) {
+		let game = getGame()
+
 		let bitmapData = game.add.bitmapData(width, height)
     this.inputSprite = game.add.sprite(x, y, bitmapData)
     

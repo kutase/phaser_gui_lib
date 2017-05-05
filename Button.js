@@ -1,5 +1,5 @@
 import AbstractLeaf from './AbstractLeaf'
-import game from './Game'
+import { getGame } from './Game'
 
 export default class Button extends AbstractLeaf {
 	constructor (x, y, key, over, out, down) {
@@ -23,6 +23,8 @@ export default class Button extends AbstractLeaf {
 
 	setupButton (key, over, out, down) {
 		let { x, y } = this
+		let game = getGame()
+		
 		this.button = game.add.button(x, y, key, this.onClick, this, over, out, down)
 	}
 

@@ -1,5 +1,5 @@
 import AbstractLeaf from './AbstractLeaf'
-import game from './Game'
+import { getGame } from './Game'
 
 export default class Image extends AbstractLeaf {
 	constructor (x, y, key) {
@@ -21,6 +21,7 @@ export default class Image extends AbstractLeaf {
 
 	setupImage (key) {
 		let { x, y } = this
+		let game = getGame()
 
 		this.image = game.add.image(x, y, key)
 	}

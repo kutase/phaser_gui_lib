@@ -1,5 +1,5 @@
 import AbstractComponent from './AbstractComponent'
-import game from './Game'
+import { getGame } from './Game'
 
 export default class Container extends AbstractComponent {
 	constructor (x, y, width = game.camera.width, height = game.camera.height) {
@@ -19,6 +19,8 @@ export default class Container extends AbstractComponent {
 	}
 
 	setupBorder () {
+    let game = getGame()
+    
 		this.border = game.add.graphics(0, 0)
 		this.border.fixedToCamera = true
 	}
