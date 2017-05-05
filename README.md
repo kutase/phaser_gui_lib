@@ -1,2 +1,2 @@
-# phaser_gui_lib
+# Phaser GUI lib
 GUI primitives for Phaser.js
