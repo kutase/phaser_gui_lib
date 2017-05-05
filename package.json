@@ -1,0 +1,17 @@
+{
+  "name": "phaser_gui_lib",
+  "version": "0.0.1",
+  "description": "GUI primitives for Phaser.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "phaser"
+  ],
+  "author": "kutase <kutase123@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "canvasinput": "git+https://github.com/kutase/CanvasInput.git"
+  }
+}
