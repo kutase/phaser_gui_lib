@@ -1,6 +1,6 @@
 let inited = false
 
-export default function init (game) {
+export function init (game) {
 	let setGame = require('./Game').setGame
 
 	setGame(game)
